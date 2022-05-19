@@ -1,0 +1,11 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: SwitchServer
+metadata:
+  name: ace-switch-server
+  namespace: tools
+spec:
+  license:
+    accept: true
+    license: L-KSBM-C87FU2
+    use: CloudPakForIntegrationNonProduction
+  version: '12.0'
