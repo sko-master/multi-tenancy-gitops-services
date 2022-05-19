@@ -4,7 +4,33 @@ ibm-apic-instance:
     spec:
       license:
         accept: true
-        use: production
-        license: L-RJON-BZEP9N
-      version: 10.0.3.0-ifix1
-      profile: n3xc14.m48
+        use: nonproduction
+        metric: VIRTUAL_PROCESSOR_CORE
+        license: L-RJON-C7BJ42
+      profile: n1xc7.m48
+      version: 10.0.4.0
+      storageClassName: ibmc-block-gold
+      gateway:
+        openTracing:
+          enabled: true
+          odTracingNamespace: cp4i-tracing
+          imageAgent: >-
+            cp.icr.io/cp/icp4i/od/icp4i-od-agent:2.5.0-amd64@sha256:000bab734ce0d423655370307c9750ae0dc0fc50bd0d766ed22591b6bfe84cb1
+          imageCollector: >-
+            cp.icr.io/cp/icp4i/od/icp4i-od-collector:2.5.0-amd64@sha256:44460e67780a4166a07a36da10260d9497526afdd899af9ad745ac6197e92ca6
+          odTracingDataHostname: od-store-od.cp4i-tracing.svc
+          odTracingRegistrationHostname: icp4i-od.cp4i-tracing.svc
+        podAutoScaling:
+          method: HPA
+          hpa:
+            minReplicas: 1
+            maxReplicas: 3
+            targetCPUUtilizationPercentage: 10
+      management:
+        billing:
+          enabled: true
+        testAndMonitor:
+          enabled: true
+      endpointTypes:
+        - APIs
+        - Events
