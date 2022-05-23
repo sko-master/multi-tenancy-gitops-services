@@ -1,0 +1,43 @@
+apiVersion: apiconnect.ibm.com/v1beta1
+kind: APIConnectCluster
+metadata:
+  labels:
+    app.kubernetes.io/instance: apiconnect
+    app.kubernetes.io/managed-by: ibm-apiconnect
+    app.kubernetes.io/name: apiconnect-minimum
+  name: apim-demo
+  namespace: tools
+spec:
+  license:
+    accept: true
+    use: nonproduction
+    metric: VIRTUAL_PROCESSOR_CORE
+    license: L-RJON-C7BJ42
+  profile: n1xc7.m48
+  version: 10.0.4.0-ifix3
+  storageClassName: ibmc-block-gold
+  endpointTypes:
+    - APIs
+    - Events
+  management:
+    billing:
+      enabled: true
+    testAndMonitor:
+      enabled: true
+  gateway:
+    openTracing:
+      enabled: true
+      odTracingNamespace: tools
+      imageAgent: >-
+        cp.icr.io/cp/icp4i/od/icp4i-od-agent:2.5.5-amd64@sha256:f192a28410a1c4cc98efe05e58614895bb890218ddb731000b6f6977e4e3dc3a
+      imageCollector: >-
+        cp.icr.io/cp/icp4i/od/icp4i-od-collector:2.5.5-amd64@sha256:4fb34e623cb7b85acff6dcd2922dab01e63ba7913a61432d99ee43860bb2cbed
+      odTracingDataHostname: od-store-od.tools.svc
+      odTracingNamespace: tools
+      odTracingRegistrationHostname: icp4i-od.tools.svc
+    podAutoScaling:
+      method: HPA
+      hpa:
+        minReplicas: 1
+        maxReplicas: 3
+        targetCPUUtilizationPercentage: 10
