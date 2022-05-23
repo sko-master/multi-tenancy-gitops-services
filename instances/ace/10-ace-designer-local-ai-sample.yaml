@@ -20,7 +20,7 @@ spec:
         class: managed-nfs-storage
   license:
     accept: true
-    license: L-KSBM-C87FU2
+    license: L-APEH-C9NCK6
     use: CloudPakForIntegrationNonProduction
   switchServer:
     name: ace-switch-server
