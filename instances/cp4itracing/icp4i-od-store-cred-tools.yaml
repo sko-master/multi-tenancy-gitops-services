@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  icp4i-od-cacert.pem: ZW1wdHk=
+  password: ZW1wdHk=
+  tracingUrl: ZW1wdHk=
+  username: ZW1wdHk=
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: icp4i-od-store-cred
+  namespace: tools
