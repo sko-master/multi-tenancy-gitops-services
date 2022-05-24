@@ -20,10 +20,25 @@ spec:
     - APIs
     - Events
   management:
-    billing:
-      enabled: true
+    analytics:
+      client: {}
+      ingestion: {}
+    apiManagerEndpoint: {}
+    portal:
+      admin: {}
+    cloudManagerEndpoint: {}
     testAndMonitor:
       enabled: true
+      hubEndpoint: {}
+      turnstileEndpoint: {}
+    consumerAPIEndpoint: {}
+    billing:
+      enabled: true
+    platformAPIEndpoint: {}
+    databaseBackup:
+      restartDB:
+        accept: false
+    originalUID: ''
   gateway:
     openTracing:
       enabled: true
