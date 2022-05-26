@@ -1,0 +1,10 @@
+apiVersion: integration.ibm.com/v1beta2
+kind: OperationsDashboardServiceBinding
+metadata:
+  name: od-apim-demo-service-binding
+spec:
+  odNamespace: tools
+  odInstanceName: od-tracing
+  sourceInstanceName: apim-demo
+  sourcePodName: apim-demo-gw-0
+  sourceSecretName: "icp4i-od-store-cred"
