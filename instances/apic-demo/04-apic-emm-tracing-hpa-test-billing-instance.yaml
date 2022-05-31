@@ -44,9 +44,9 @@ spec:
       enabled: true
       odTracingNamespace: tools
       imageAgent: >-
-        cp.icr.io/cp/icp4i/od/icp4i-od-agent:2.5.5-amd64@sha256:f192a28410a1c4cc98efe05e58614895bb890218ddb731000b6f6977e4e3dc3a
+        cp.icr.io/cp/icp4i/od/icp4i-od-agent:2.5.6-amd64@sha256:8c808d1b54664eda44b7b54e4a7af89e12f6e701baf69b1d6e752704448f0305
       imageCollector: >-
-        cp.icr.io/cp/icp4i/od/icp4i-od-collector:2.5.5-amd64@sha256:4fb34e623cb7b85acff6dcd2922dab01e63ba7913a61432d99ee43860bb2cbed
+        cp.icr.io/cp/icp4i/od/icp4i-od-collector:2.5.6-amd64@sha256:d3934be22d88e11f9512f878d6ac05f2d29e40be7cee0b39c4b455ff786aba76
       odTracingDataHostname: od-store-od.tools.svc
       odTracingNamespace: tools
       odTracingRegistrationHostname: icp4i-od.tools.svc

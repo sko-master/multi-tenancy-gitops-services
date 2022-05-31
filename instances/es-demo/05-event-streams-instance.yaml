@@ -23,9 +23,9 @@ spec:
         type: custom
       config:
         default.replication.factor: 3
-        inter.broker.protocol.version: '3.0'
+        inter.broker.protocol.version: '3.1'
         log.cleaner.threads: 6
-        log.message.format.version: '3.0'
+        log.message.format.version: '3.1'
         min.insync.replicas: 2
         num.io.threads: 24
         num.network.threads: 9
@@ -67,6 +67,4 @@ spec:
         class: ibmc-block-gold
         size: 2Gi
         type: persistent-claim
-    entityOperator:
-      topicOperator: {}
-  version: 11.0.0
+  version: 11.0.1
