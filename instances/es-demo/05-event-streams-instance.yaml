@@ -52,7 +52,7 @@ spec:
             name: metrics-config
       replicas: 3
       storage:
-        class: ibmc-block-gold
+        class: managed-nfs-storage
         size: 4Gi
         type: persistent-claim
     zookeeper:
@@ -64,7 +64,7 @@ spec:
             name: metrics-config
       replicas: 3
       storage:
-        class: ibmc-block-gold
+        class: managed-nfs-storage
         size: 2Gi
         type: persistent-claim
   version: 11.0.1

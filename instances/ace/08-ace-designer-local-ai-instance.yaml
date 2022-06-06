@@ -22,8 +22,8 @@ spec:
     accept: true
     license: L-APEH-C9NCK6
     use: CloudPakForIntegrationNonProduction
+  replicas: 1
   switchServer:
     name: ace-switch-server
   useCommonServices: true
   version: '12.0'
-  replicas: 2
