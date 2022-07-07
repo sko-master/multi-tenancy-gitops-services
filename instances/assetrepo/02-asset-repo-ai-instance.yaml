@@ -1,0 +1,18 @@
+apiVersion: integration.ibm.com/v1beta1
+kind: AssetRepository
+metadata:
+  name: asset-repo-ai
+  namespace: tools
+spec:
+  designerAIFeatures:
+    enabled: true
+  license:
+    accept: true
+    license: L-RJON-CD3JKX
+  replicas: 1
+  storage:
+    assetDataVolume:
+      class: ibmc-file-gold-gid
+    couchVolume:
+      class: ibmc-block-gold
+  version: 2022.2.1-0

@@ -23,9 +23,9 @@ spec:
         type: custom
       config:
         default.replication.factor: 3
-        inter.broker.protocol.version: '3.1'
+        inter.broker.protocol.version: '3.2'
         log.cleaner.threads: 6
-        log.message.format.version: '3.1'
+        log.message.format.version: '3.2'
         min.insync.replicas: 2
         num.io.threads: 24
         num.network.threads: 9
@@ -52,7 +52,7 @@ spec:
             name: metrics-config
       replicas: 3
       storage:
-        class: managed-nfs-storage
+        class: ibmc-block-gold
         size: 4Gi
         type: persistent-claim
     zookeeper:
@@ -64,7 +64,9 @@ spec:
             name: metrics-config
       replicas: 3
       storage:
-        class: managed-nfs-storage
+        class: ibmc-block-gold
         size: 2Gi
         type: persistent-claim
-  version: 11.0.1
+    entityOperator:
+      topicOperator: {}
+  version: 11.0.2

@@ -13,9 +13,9 @@ spec:
     license: CP4I
   storage:
     configDbVolume:
-      class: managed-nfs-storage
+      class: ibmc-file-gold-gid
     sharedVolume:
-      class: managed-nfs-storage
+      class: ibmc-file-gold-gid
     tracingVolume:
-      class: managed-nfs-storage
-  version: 2021.4.1-1
+      class: ibmc-block-gold
+  version: 2022.2.1-0-lts

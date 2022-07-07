@@ -12,41 +12,26 @@ spec:
     accept: true
     use: nonproduction
     metric: VIRTUAL_PROCESSOR_CORE
-    license: L-RJON-C7BJ42
+    license: L-RJON-CEBLEH
   profile: n1xc7.m48
-  version: 10.0.4.0-ifix3
+  version: 10.0.5.0
   storageClassName: ibmc-block-gold
   endpointTypes:
     - APIs
     - Events
   management:
-    analytics:
-      client: {}
-      ingestion: {}
-    apiManagerEndpoint: {}
-    portal:
-      admin: {}
-    cloudManagerEndpoint: {}
-    testAndMonitor:
-      enabled: true
-      hubEndpoint: {}
-      turnstileEndpoint: {}
-    consumerAPIEndpoint: {}
     billing:
       enabled: true
-    platformAPIEndpoint: {}
-    databaseBackup:
-      restartDB:
-        accept: false
-    originalUID: ''
+    testAndMonitor:
+      enabled: true
   gateway:
     openTracing:
       enabled: true
       odTracingNamespace: tools
       imageAgent: >-
-        cp.icr.io/cp/icp4i/od/icp4i-od-agent:2.5.6-amd64@sha256:8c808d1b54664eda44b7b54e4a7af89e12f6e701baf69b1d6e752704448f0305
+        cp.icr.io/cp/icp4i/od/icp4i-od-agent:2.6.0-amd64@sha256:20b3f5f40bb6907c6094749a6697ebb43fb602f87f1eb6f72a86f205507d8537
       imageCollector: >-
-        cp.icr.io/cp/icp4i/od/icp4i-od-collector:2.5.6-amd64@sha256:d3934be22d88e11f9512f878d6ac05f2d29e40be7cee0b39c4b455ff786aba76
+        cp.icr.io/cp/icp4i/od/icp4i-od-collector:2.6.0-amd64@sha256:7630f282f8f009d495963af3c0fe6368c827d2ff8125ccfb20c852afe2c523c5
       odTracingDataHostname: od-store-od.tools.svc
       odTracingNamespace: tools
       odTracingRegistrationHostname: icp4i-od.tools.svc
@@ -55,4 +40,4 @@ spec:
       hpa:
         minReplicas: 1
         maxReplicas: 3
-        targetCPUUtilizationPercentage: 10
+        targetCPUUtilizationPercentage: 50

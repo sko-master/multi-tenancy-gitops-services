@@ -5,7 +5,7 @@ ibm-opsdashboard-operator:
     ibmopsdashboard:
       name: ibm-opsdashboard
       subscription:
-        channel: v2.1-eus
+        channel: v2.6-lts
         installPlanApproval: Automatic
         name: ibm-integration-operations-dashboard
         source: ibm-operator-catalog

@@ -6,7 +6,7 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-APEH-C9NCK6
+    license: L-APEH-CCHL5W
     use: CloudPakForIntegrationNonProduction
   pod:
     containers:
@@ -30,6 +30,6 @@ spec:
   storage:
     size: 5Gi
     type: persistent-claim
-    class: managed-nfs-storage
+    class: ibmc-file-gold-gid
   useCommonServices: true
-  version: '12.0'
+  version: 12.0-lts
